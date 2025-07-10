@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évaluation Ateliers - Journée d'Intégration</title>
+    <link rel="stylesheet" href="evaluation_css.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Évaluation des Ateliers - Journée d'Intégration</h1>
+            <p>Lycée Professionnel du Bâtiment</p>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('groupe1')">Groupe 1</button>
+            <button class="tab" onclick="showTab('groupe2')">Groupe 2</button>
+            <button class="tab" onclick="showTab('groupe3')">Groupe 3</button>
+            <button class="tab" onclick="showTab('groupe4')">Groupe 4</button>
+            <button class="tab" onclick="showTab('groupe5')">Groupe 5</button>
+            <button class="tab" onclick="showTab('groupe6')">Groupe 6</button>
+            <button class="tab" onclick="showTab('groupe7')">Groupe 7</button>
+            <button class="tab" onclick="showTab('groupe8')">Groupe 8</button>
+            <button class="tab" onclick="showTab('groupe9')">Groupe 9</button>
+            <button class="tab" onclick="showTab('groupe10')">Groupe 10</button>
+            <button class="tab" onclick="showTab('groupe11')">Groupe 11</button>
+            <button class="tab" onclick="showTab('classement')">Classement Général</button>
+        </div>
+        
+        <div class="legend">
+            <h4>Légende du système d'évaluation :</h4>
+            <div class="legend-item"><strong>État :</strong> ✅ = Réussi (+20 pts + temps + esprit), ⚠️ = Pas fait (0 pts), ❌ = Échec (+10 pts + esprit)</div>
+            <div class="legend-item"><strong>Temps :</strong> 00:30 à 10:00 (par pas de 30s) / 15:00 max (3:00 max pour jeux EMNB BTP)</div>
+            <div class="legend-item"><strong>Esprit d'équipe :</strong> /20 (0, 5, 10, 15, 20)</div>
+            <div class="legend-item"><strong>Points temps :</strong> 0-5 min = 20 pts, 6-10 min = 10 pts, 11-15 min = 5 pts</div>
+            <div class="legend-item"><strong>Jeux EMNB BTP (3 min max) :</strong> 0-1 min = 20 pts, 1m30-2 min = 10 pts, 2m30-3 min = 5 pts</div>
+        </div>
+
+        <div id="groupe1" class="tab-content active">
+            <h2>Groupe 1</h2>
+            <div id="evaluation-groupe1"></div>
+            <div class="group-actions">
+                <button class="export-btn" onclick="resetGroupData('groupe1')">Réinitialiser Groupe 1</button>
+            </div>
+        </div>
+        
+        <div id="groupe2" class="tab-content">
+            <h2>Groupe 2</h2>
+            <div id="evaluation-groupe2"></div>
+            <div class="group-actions">
+                <button class="export-btn" onclick="resetGroupData('groupe2')">Réinitialiser Groupe 2</button>
+            </div>
+        </div>
+        
+        <div id="groupe3" class="tab-content">
+            <h2>Groupe 3</h2>
+            <div id="evaluation-groupe3"></div>
+            <div class="group-actions">
+                <button class="export-btn" onclick="resetGroupData('groupe3')">Réinitialiser Groupe 3</button>
+            </div>
+        </div>
+        
+        <div id="groupe4" class="tab-content">
+            <h2>Groupe 4</h2>
+            <div id="evaluation-groupe4"></div>
+            <div class="group-actions">
+                <button class="export-btn" onclick="resetGroupData('groupe4')">Réinitialiser Groupe 4</button>
+            </div>
+        </div>
+        
+        <div id="groupe5" class="tab-content">
+            <h2>Groupe 5</h2>
+            <div id="evaluation-groupe5"></div>
+            <div class="group-actions">
+                <button class="export-btn" onclick="resetGroupData('groupe5')">Réinitialiser Groupe 5</button>
+            </div>
+        </div>
+        
+        <div id="groupe6" class="tab-content">
+            <h2>Groupe 6</h2>
+            <div id="evaluation-groupe6"></div>
+            <div class="group-actions">
+                <button class="export-btn" onclick="resetGroupData('groupe6')">Réinitialiser Groupe 6</button>
+            </div>
+        </div>
+        
+        <div id="groupe7" class="tab-content">
+            <h2>Groupe 7</h2>
+            <div id="evaluation-groupe7"></div>
+            <div class="group-actions">
+                <button class="export-btn" onclick="resetGroupData('groupe7')">Réinitialiser Groupe 7</button>
+            </div>
+        </div>
+        
+        <div id="groupe8" class="tab-content">
+            <h2>Groupe 8</h2>
+            <div id="evaluation-groupe8"></div>
+            <div class="group-actions">
+                <button class="export-btn" onclick="resetGroupData('groupe8')">Réinitialiser Groupe 8</button>
+            </div>
+        </div>
+        
+        <div id="groupe9" class="tab-content">
+            <h2>Groupe 9</h2>
+            <div id="evaluation-groupe9"></div>
+            <div class="group-actions">
+                <button class="export-btn" onclick="resetGroupData('groupe9')">Réinitialiser Groupe 9</button>
+            </div>
+        </div>
+        
+        <div id="groupe10" class="tab-content">
+            <h2>Groupe 10</h2>
+            <div id="evaluation-groupe10"></div>
+            <div class="group-actions">
+                <button class="export-btn" onclick="resetGroupData('groupe10')">Réinitialiser Groupe 10</button>
+            </div>
+        </div>
+        
+        <div id="groupe11" class="tab-content">
+            <h2>Groupe 11</h2>
+            <div id="evaluation-groupe11"></div>
+            <div class="group-actions">
+                <button class="export-btn" onclick="resetGroupData('groupe11')">Réinitialiser Groupe 11</button>
+            </div>
+        </div>
+        
+        <div id="classement" class="tab-content">
+            <h2>Classement Général</h2>
+            <div id="classement-general"></div>
+        </div>
+        
+        <div style="text-align: center; padding: 20px;">
+            <button class="export-btn" onclick="exportToPDF()">Exporter en PDF</button>
+        </div>
+    </div>
+
+    <script src="evaluation_js.js"></script>
+</body>
+</html>

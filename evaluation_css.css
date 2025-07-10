@@ -1,0 +1,194 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    overflow-x: auto;
+}
+
+.tab {
+    padding: 12px 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6c757d;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.tab.active {
+    background: #007bff;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab:hover:not(.active) {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.evaluation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.evaluation-table th {
+    background: #f8f9fa;
+    padding: 12px 8px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+    font-weight: 600;
+    color: #495057;
+}
+
+.evaluation-table td {
+    padding: 8px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+
+.evaluation-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.atelier-name {
+    text-align: left !important;
+    font-weight: 500;
+    color: #495057;
+    max-width: 200px;
+}
+
+select {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.total-cell {
+    background: #e7f3ff !important;
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.classement-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.classement-table th {
+    background: #28a745;
+    color: white;
+    padding: 15px;
+    border: 1px solid #1e7e34;
+    text-align: center;
+    font-weight: 600;
+}
+
+.classement-table td {
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+
+.classement-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.rank-1 { background: #ffd700 !important; }
+.rank-2 { background: #c0c0c0 !important; }
+.rank-3 { background: #cd7f32 !important; }
+
+.export-btn {
+    background: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px 5px;
+    transition: background 0.3s;
+}
+
+.export-btn:hover {
+    background: #c82333;
+}
+
+.sheets-btn {
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px 5px;
+    transition: background 0.3s;
+}
+
+.sheets-btn:hover {
+    background: #218838;
+}
+
+.legend {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    font-size: 13px;
+}
+
+.legend h4 {
+    margin-top: 0;
+    color: #495057;
+}
+
+.legend-item {
+    margin: 5px 0;
+}
+
+.group-actions {
+    text-align: center;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    margin: 20px 0;
+}
